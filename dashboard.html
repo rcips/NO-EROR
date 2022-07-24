@@ -1,0 +1,459 @@
+<!-- @format -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dashboard</title>
+        <link rel="shortcut icon" type="image/png" href="img/icon.png">
+        <link rel="stylesheet" href="./css/style.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        <script
+            src="https://kit.fontawesome.com/651214d8bf.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body onload="show();">
+        <div class="container">
+            <aside>
+                <div class="top">
+                    <div class="logo">
+                        <img src="./image/giphy.gif" alt="Logo" />
+                        <h2>NO <span class="primary">EROR</span></h2>
+                    </div>
+                    <div class="close" id="close-btn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <a href="#">
+                        <i class="fa-solid fa-house"></i>
+                        <h3>Home</h3>
+                    </a>
+                    <a href="./dashboard.html" class="active">
+                        <i class="fa-solid fa-border-all"></i>
+                        <h3>Dashboard</h3>
+                    </a>
+                    <a href="./Tutorials.html">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <h3>Tutorials</h3>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-store"></i>
+                        <h3>Products</h3>
+                        <span class="product-count">3</span>
+                    </a>
+                    <a href="./newsfeed.html">
+                        <i class="fa-solid fa-newspaper"></i>
+                        <h3>Newsfeeds</h3>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-users"></i>
+                        <h3>Developers</h3>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-address-book"></i>
+                        <h3>Contacts</h3>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <h3>Logout</h3>
+                    </a>
+                </div>
+            </aside>
+            <main>
+                <h1>Dashboard</h1>
+
+                <div class="date">
+                    <input type="date" />
+                </div>
+                <div class="insights">
+                    <!--HISTORY-->
+                    <div class="history">
+                        <i class="fa-solid fa-scroll"></i>
+                        <div class="middle">
+                            <div class="lef">
+                                <h3>Current Time</h3>
+                                <h1 id="heading">0:00:00:000</h1>
+                            </div>
+                            <div class="progress">
+                                <svg>
+                                    <circle cx="38" cy="38" r="36"></circle>
+                                </svg>
+                                <div class="number">
+                                    <p>81%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted">Last 24 hours</small>
+                    </div>
+                    <!--END OF HISTORY-->
+                    <!--Stats-->
+                    <div class="stats">
+                        <i class="fa-solid fa-chart-column"></i>
+                        <div class="middle">
+                            <div class="lef">
+                                <h3>Stats</h3>
+                                <canvas
+                                    id="myChart"
+                                    style="width: 100%; max-width: 600px"
+                                ></canvas>
+                            </div>
+                            <div class="progress">
+                                <svg>
+                                    <circle cx="38" cy="38" r="36"></circle>
+                                </svg>
+                                <div class="number">
+                                    <p>62%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted">Last 24 hours</small>
+                    </div>
+                </div>
+                <div class="recent-orders">
+                    <h2>Recent Orders</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Product Number</th>
+                                <th>Payment</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- <tr>
+                                <td>3x3</td>
+                                <td>85631</td>
+                                <td>COD</td>
+                                <td class="success">Delivered</td>
+                                <td class="primary">Details</td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                    <a href="#">Show All</a>
+                </div>
+                <div class="container-timer">
+                    <h1>Rubik's Cube Timer</h1>
+                    <div class="timer"><span id="time"></span></div>
+                    <input
+                        class="btn"
+                        type="button"
+                        value="Start"
+                        onclick="start();"
+                    />
+                    <input
+                        class="btn"
+                        type="button"
+                        value="Stop"
+                        onclick="stop();"
+                    />
+                    <input
+                        class="btn"
+                        type="button"
+                        value="Reset"
+                        onclick="reset()"
+                    />
+
+                    <p>Press <kbd>Space</kbd> To Start and Stop</p>
+                    <p>Press <kbd>R</kbd> To Reset</p>
+                    <p>This has 3 second delay for start. Ping Start.</p>
+                </div>
+                <div class="container-setting">
+                    <div class="leftbox">
+                        <nav>
+                            <a onclick="tabs(0)" class="tab active" id="active">
+                                <i class="fa-solid fa-user"></i
+                            ></a>
+                            <a onclick="tabs(1)" class="tab">
+                                <i class="fa-solid fa-image-portrait"></i
+                            ></a>
+                            <a onclick="tabs(2)" class="tab">
+                                <i class="fa-solid fa-list-check"></i
+                            ></a>
+
+                            <a onclick="tabs(3)" class="tab">
+                                <i class="fa-solid fa-cog"></i
+                            ></a>
+                        </nav>
+                    </div>
+                    <div class="rightbox">
+                        <div class="profile tabShow">
+                            <h1>Personal Info</h1>
+                            <h2>Full name</h2>
+                            <input type="text" class="input" value="User" />
+                            <h2>Birthday</h2>
+                            <input
+                                type="text"
+                                class="input"
+                                value="Sept 20 ,1998"
+                            />
+                            <h2>Gender</h2>
+                            <input type="text" class="input" value="Male" />
+                            <h2>Email</h2>
+                            <input
+                                type="text"
+                                class="input"
+                                value="example@gmail.com"
+                            />
+                            <h2>Password</h2>
+                            <input
+                                type="password"
+                                class="input"
+                                value="cutiepatutie00"
+                            />
+                            <br />
+                            <button class="button">Update</button>
+                        </div>
+                        <div class="picture tabShow">
+                            <h1>My profile</h1>
+                            <input
+                                type="file"
+                                accept=".jpg, .png, .jpeg, .gif"
+                                value=""
+                            />
+                            <h4>Change Your Profile Picture</h4>
+                            <div class="img-preview-container">
+                                <img
+                                    class="img-preview"
+                                    src="./image/profile.png"
+                                    alt="profile"
+                                />
+                            </div>
+                            <button class="button" type="submit" disabled="">
+                                Save New Picture
+                            </button>
+                            <button class="button">Update</button>
+                        </div>
+                        <div class="privacy tabShow">
+                            <h1>Privacy Setting</h1>
+                            <h2>Manage Email Noti.</h2>
+                            <p></p>
+                            <h2>Manage Privacy</h2>
+                            <p></p>
+                            <h2>View Terms of Us</h2>
+                            <p></p>
+                            <h2>Personalized Ad Experience</h2>
+                            <p></p>
+                            <h2>Protect Account</h2>
+                            <p></p>
+                            <button class="button">Update</button>
+                        </div>
+                        <div class="settings tabShow">
+                            <h1>User Setting</h1>
+                            <h2>Sync Account</h2>
+                            <p></p>
+                            <h2>Hold Products</h2>
+                            <p></p>
+                            <h2>Return/Refund Products</h2>
+                            <p></p>
+                            <h2>Your Devices</h2>
+                            <p></p>
+                            <h2>Referrals</h2>
+                            <p></p>
+                            <button class="button">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Profile -->
+            <div class="right">
+                <div class="top">
+                    <div id="menu-btn">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <div class="profile">
+                        <div class="info">
+                            <p>Hey, <b>User</b></p>
+                            <small class="text-muted">Web Developer</small>
+                        </div>
+                        <div class="profile-photo">
+                            <img src="./image/profile.png" alt="profile" />
+                        </div>
+                    </div>
+                </div>
+                <!-- End of top right -->
+                <!-- Recent Updates -->
+                <div class="recent-updates">
+                    <h2>Recent Updates</h2>
+                    <div class="updates">
+                        <div class="update">
+                            <div class="profile-photo">
+                                <img src="./image/icon3.jpg" alt="profile" />
+                            </div>
+                            <div class="message">
+                                <p>
+                                    <b>Victoria Secret</b> Update his new record
+                                    in Leaderboard
+                                </p>
+                                <small class="text-muted">2 minutes ago</small>
+                            </div>
+                        </div>
+                        <div class="update">
+                            <div class="profile-photo">
+                                <img src="./image/tony.jpg" alt="profile" />
+                            </div>
+                            <div class="message">
+                                <p>
+                                    <b>Tommy Blake</b> received his new 4x4
+                                    Rubiks cube
+                                </p>
+                                <small class="text-muted">1 minutes ago</small>
+                            </div>
+                        </div>
+                        <div class="update">
+                            <div class="profile-photo">
+                                <img src="./image/icon6.jpg" alt="profile" />
+                            </div>
+                            <div class="message">
+                                <p>
+                                    <b>Amanda Style</b> Update his new record
+                                    and She is the Top 1 of our Leaderboard
+                                </p>
+                                <small class="text-muted">3 seconds ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Member Analytics -->
+                <div class="member-analytics">
+                    <h2>Member Monitoring</h2>
+                    <div class="user online">
+                        <div class="icon">
+                            <i class="fa-solid fa-user-group"></i>
+                        </div>
+                        <div class="right">
+                            <div class="info">
+                                <h3>ONLINE MEMBERS</h3>
+                                <small class="text-muted">Last 24 Hours</small>
+                            </div>
+                            <h5 class="success">+50%</h5>
+                            <h3>3849</h3>
+                        </div>
+                    </div>
+                    <div class="user new">
+                        <div class="icon">
+                            <i class="fa-solid fa-user-group"></i>
+                        </div>
+                        <div class="right">
+                            <div class="info">
+                                <h3>NEW MEMBERS</h3>
+                                <small class="text-muted">Last 24 Hours</small>
+                            </div>
+                            <h5 class="success">+39%</h5>
+                            <h3>2093</h3>
+                        </div>
+                    </div>
+                    <div class="user offline">
+                        <div class="icon">
+                            <i class="fa-solid fa-user-group"></i>
+                        </div>
+                        <div class="right">
+                            <div class="info">
+                                <h3>OFFLINE MEMBERS</h3>
+                                <small class="text-muted">Last 24 Hours</small>
+                            </div>
+                            <h5 class="danger">-10%</h5>
+                            <h3>1049</h3>
+                        </div>
+                    </div>
+                    <div class="user add-activity">
+                        <div>
+                            <i class="fa-solid fa-plus"></i>
+                            <h3>Add Activity</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- Match History -->
+                <div class="match-history">
+                    <h2>Time History</h2>
+                    <div class="time-history" id="timer"></div>
+                    <input
+                        class="btn"
+                        type="button"
+                        value="Clear History"
+                        onclick="burado()"
+                    />
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container-footer">
+                <div class="row">
+                    <div class="footer-col">
+                        <div class="title">
+                            <img
+                                src="./image/giphy.gif"
+                                alt="Logo"
+                                style="width: 50px"
+                            />
+                            <h2 class="white">
+                                NO <span class="primary">EROR</span>
+                            </h2>
+                        </div>
+                        <ul>
+                            <li><a href="#">about us</a></li>
+                            <li><a href="#">our services</a></li>
+                            <li><a href="#">privacy policy</a></li>
+                            <li><a href="#">Developers Team</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Get help</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">shipping</a></li>
+                            <li><a href="#">returns</a></li>
+                            <li><a href="#">order status</a></li>
+                            <li><a href="#">payment options</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="#">Rubiks 2x2</a></li>
+                            <li><a href="#">Rubiks 3x3</a></li>
+                            <li><a href="#">Rubiks 4x4</a></li>
+                            <li><a href="#">Rubiks 5x5</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Follow us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <audio id="myAudio">
+            <source
+                src="http://soundbible.com/grab.php?id=1424&type=mp3"
+                type="audio/mpeg"
+            />
+            Your browser does not support the audio element.
+        </audio>
+        <script src="./js/orders.js"></script>
+        <script src="./js/main.js"></script>
+        <script>
+            const tabBtn = document.querySelectorAll(".tab")
+            const tab = document.querySelectorAll(".tabShow")
+
+            function tabs(panelIndex) {
+                tab.forEach(function (node) {
+                    node.style.display = "none"
+                })
+                tab[panelIndex].style.display = "block"
+            }
+            tabs(0)
+        </script>
+    </body>
+</html>

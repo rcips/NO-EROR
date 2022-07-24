@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NO EROR</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/972df6eb1d.js" crossorigin="anonymous"></script>
+    <script defer src="js/index.js"></script>
+</head>
+      
+      <body>
+        <div id="id01" class="modal">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <form class="modal-content" action="/action_page.php">
+            <div class="container">
+              <h1>Sign Up</h1>
+              <p>Please fill in this form to create an account.</p>
+              <hr>
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required>
+        
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+        
+              <label for="psw-repeat"><b>Repeat Password</b></label>
+              <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+              
+              <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+              </label>
+        
+              <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+        
+              <div class="clearfix">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <button type="submit" class="signupbtn"  >Sign Up</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div id="id02" class="modal">
+  
+          <form class="modal-content animate" action="./newsfeed.html" method="post">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+              <img src="./img/profile.png" alt="Avatar" class="avatar">
+            </div>
+        
+            <div class="container">
+              <label for="uname"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" required>
+        
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+                
+              <button href="./newsfeed.html">Login</button>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+            </div>
+        
+            <div class="container" style="background-color:#f1f1f1">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+          </form>
+        </div>
+        
+        
+       
+        
+        <header>
+          <!-- Top Navigation -->
+          <nav>
+            <div class="nav-links">
+              <div class="nav-main-links">
+                <ul class="topnav">
+                  <!-- Main Logo -->
+                  <li>
+                    <a href="index.html"><img src="./img/giphy.gif" style="height:50px;"></a>
+                  </li>
+                  <!-- Desktop Nav Items -->
+                  <li><a class="desktop-nav-item" href="./Tutorials.html">Learn to solve</a></li>
+                  <li><a class="desktop-nav-item" href="./shop.html">Get a CUBE</a></li>
+                  <li><a class="desktop-nav-item" href="./developers.html">Developers</a></li>
+                  <!-- Hamburger Menu Buttons -->
+                  <li>
+                    <button class="hamburger-menu" aria-label="Open Navigation Menu">
+                      <i id="ham-menu-icon" class="fa-solid fa-bars"></i>
+                      <i id="ham-menu-close" class="fa-solid fa-square-xmark hidden"></i>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="nav-secondary-links">
+                <ul>
+                  <li>
+                    <button class="button"  onclick="document.getElementById('id02').style.display='block'">Log In</button>
+                  </li>
+                  <li>
+                    <button class="button button-dark" onclick="document.getElementById('id01').style.display='block'">Sign Up</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Mobile Nav Menu -->
+            <div class="mobile-nav-menu">
+              <ul>
+                <li>
+                  <button class="nav-menu-button">
+                    <span class="mobile-nav-item">LEARN</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </li>
+                <li><a class="mobile-nav-item" href="#">GET A CUBE</a></li>
+                <li><a class="mobile-nav-item" href="#">DEVELOPERS</a></li>
+                <hr />
+              </ul>
+              <div class="ham-nav-menu-buttons">
+                <button class="button">Log In</button>
+                <button class="button">Sign Up</button>
+              </div>
+            </div>
+          </nav>
+        </header>
+      
+        <!-- Main Content -->
+        <main>
+          <section class="primary-cta card-container">
+            <div class="primary-cta-slogan card-item">
+              <h1>
+                <span class="secondary-color"> WHY BE A COUCH POTATO?<br/> <span class="stroke">LEARN SOMETHING NEW EVERYDAY! </span> 
+                </span>
+              </h1>
+            </div>
+            <div class="primary-cta card-item text-block-padding column">
+              <h1>SHARPEN THE MIND WITH PUZZLES</h1>
+              <p>
+               Learn how to solve a Rubik's cube. Learn new algorithms to speed up your solves. Meet people.
+              </p>
+              <a class="button button-light no-decoration" href="#">Sign Up</a>
+            </div>
+          </section>
+          <section class="holiday-cta card-container">
+            <div class="holiday-cta-image card-item">
+              <figure class="card-figure">
+                <img class="card-image" src="./img/index.jpg" alt="Cup of coffee on a pink windowsill" />
+            
+              </figure>
+            </div>
+            <div class="holiday-cta card-item text-block-padding column">
+              <h2>Play, Connect, Compete with our Community</h2>
+              <p>
+                Why learn and solve alone when you can meet a lot of friends with the same interest as you! 
+              </p>
+              <a class="button button-light no-decoration" href="#">Sign Up</a>
+            </div>
+          </section>
+          <section class="featured-product-cta card-container">
+            <div class="featured-product-image card-item">
+              <figure class="card-figure">
+                <img class="card-image" src="./img/indexx.jfif" alt="Person holding a Rubiks coube" />
+              </figure>
+            </div>
+            <div class="featured-product-cta card-item text-block-padding column">
+              <h2>Get Your First Cube Now!</h2>
+              <p>
+                Visit the shop. Discover new puzzles. We don't just offer cubes, Rubiks puzzles comes in different shapes!
+              </p>
+              <a class="button button-light no-decoration" href="#">Shop now</a>
+            </div>
+          </section>
+        </main>  
+        <hr/>
+      </body>
+</html>

@@ -1,0 +1,866 @@
+<!-- @format -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Newsfeeds</title>
+        <link rel="shortcut icon" type="image/png" href="img/icon.png">
+        <link rel="stylesheet" href="./css/newsfeed.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        />
+        <script
+            src="https://kit.fontawesome.com/651214d8bf.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <div class="container">
+            <aside>
+                <div class="top">
+                    <div class="logo">
+                        <img src="./image/giphy.gif" alt="Logo" />
+                        <h2>NO <span class="primary">EROR</span></h2>
+                    </div>
+                    <div class="close" id="close-btn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <a href="#">
+                        <i class="fa-solid fa-house"></i>
+                        <h3>Home</h3>
+                    </a>
+                    <a href="./dashboard.html">
+                        <i class="fa-solid fa-border-all"></i>
+                        <h3>Dashboard</h3>
+                    </a>
+                    <a href="./Tutorials.html">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <h3>Tutorials</h3>
+                    </a>
+                    <a href="#" id="products" class="products">
+                        <i class="fa-solid fa-store"></i>
+                        <h3>Products</h3>
+                        <span class="product-count">3</span>
+                    </a>
+                    <a href="#" class="active">
+                        <i class="fa-solid fa-newspaper"></i>
+                        <h3>Newsfeeds</h3>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-users"></i>
+                        <h3>Developers</h3>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-address-book"></i>
+                        <h3>Contacts</h3>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <h3>Logout</h3>
+                    </a>
+                </div>
+            </aside>
+            <main>
+                <!-- Stories -->
+                <div class="middle">
+                    <div class="stories">
+                        <div class="story">
+                            <div class="profile-photo">
+                                <img src="./image/profile.png" />
+                            </div>
+                            <p class="name">Your Story</p>
+                        </div>
+                        <div class="story">
+                            <div class="profile-photo">
+                                <img src="./image/profile-9.jpg" />
+                            </div>
+                            <p class="name">Lilla Batungbakal</p>
+                        </div>
+                        <div class="story">
+                            <div class="profile-photo">
+                                <img src="./image/profile-10.jpg" />
+                            </div>
+                            <p class="name">Winnie Wonka</p>
+                        </div>
+                        <div class="story">
+                            <div class="profile-photo">
+                                <img src="./image/profile-11.jpg" />
+                            </div>
+                            <p class="name">Jabari Pennystone</p>
+                        </div>
+                        <div class="story">
+                            <div class="profile-photo">
+                                <img src="./image/profile-12.jpg" />
+                            </div>
+                            <p class="name">Honney Dela Cruz</p>
+                        </div>
+                        <div class="story">
+                            <div class="profile-photo">
+                                <img src="./image/profile-13.jpg" />
+                            </div>
+                            <p class="name">Tina Puti</p>
+                        </div>
+                    </div>
+                    <!-- End of Stories -->
+                    <form class="create-post">
+                        <div class="profile-photo">
+                            <img src="./image/profile.png" />
+                        </div>
+                        <input
+                            type="text"
+                            placeholder="What's on your mind, User?"
+                            id="create-post"
+                        />
+                        <input
+                            type="submit"
+                            value="Post"
+                            class="btn btn-primary"
+                        />
+                    </form>
+                    <!-- Feeds -->
+                    <div class="feeds">
+                        <!-- First Feed -->
+                        <div class="feed">
+                            <div class="head">
+                                <div class="user">
+                                    <div class="profile-photo">
+                                        <img src="./image/profile-2.jpg" />
+                                    </div>
+                                    <div class="info">
+                                        <h3>Lana Peras</h3>
+                                        <small class="text-muted"
+                                            >Pampangga, 15 minutes ago
+                                        </small>
+                                    </div>
+                                </div>
+                                <span class="edit">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                            <div class="photo">
+                                <img src="./image/feed-1.jpg" />
+                            </div>
+                            <div class="action-button">
+                                <div class="interaction-button">
+                                    <span
+                                        ><i class="fa-regular fa-heart"></i
+                                    ></span>
+                                    <span
+                                        ><i class="fa-regular fa-comment"></i
+                                    ></span>
+                                    <span
+                                        ><i class="fa-solid fa-share-nodes"></i
+                                    ></span>
+                                </div>
+                                <div class="bookmark">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </div>
+                            </div>
+                            <div class="liked-by">
+                                <span
+                                    ><img src="./image/profile-17.jpg"
+                                /></span>
+                                <span><img src="./image/profile-5.jpg" /></span>
+                                <span><img src="./image/profile-6.jpg" /></span>
+                                <p>
+                                    Like by <b>Ernesto Demagiba</b> and
+                                    <b>2,323 others</b>
+                                </p>
+                            </div>
+                            <div class="caption">
+                                <p>
+                                    <b>Lana Peras</b> On this day, January 29,
+                                    1980- Rubik’s Cube shaped up as global
+                                    success
+                                    <span class="hash-tag"> #rubiks</span>
+                                </p>
+                            </div>
+                            <div class="comments text-muted">
+                                View all 277 comments
+                            </div>
+                        </div>
+                        <!-- Second Feed -->
+                        <div class="feed">
+                            <div class="head">
+                                <div class="user">
+                                    <div class="profile-photo">
+                                        <img src="./image/profile-5.jpg" />
+                                    </div>
+                                    <div class="info">
+                                        <h3>Krystal Kineso</h3>
+                                        <small class="text-muted"
+                                            >Rizal , 2 minutes ago
+                                        </small>
+                                    </div>
+                                </div>
+                                <span class="edit">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                            <div class="photo">
+                                <img src="./image/feed-2.jpg" />
+                            </div>
+                            <div class="action-button">
+                                <div class="interaction-button">
+                                    <span
+                                        ><i class="fa-regular fa-heart"></i
+                                    ></span>
+                                    <span
+                                        ><i class="fa-regular fa-comment"></i
+                                    ></span>
+                                    <span
+                                        ><i class="fa-solid fa-share-nodes"></i
+                                    ></span>
+                                </div>
+                                <div class="bookmark">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </div>
+                            </div>
+                            <div class="liked-by">
+                                <span><img src="./image/profile-6.jpg" /></span>
+                                <span
+                                    ><img src="./image/profile-15.jpg"
+                                /></span>
+                                <span><img src="./image/profile-3.jpg" /></span>
+                                <p>
+                                    Like by <b>Samply Gibagiba</b> and
+                                    <b>1,233 others</b>
+                                </p>
+                            </div>
+                            <div class="caption">
+                                <p>
+                                    <b>Krystal Kineso</b> Flexing rubriks
+                                    <span class="hash-tag"> #rubiksmoto</span>
+                                </p>
+                            </div>
+                            <div class="comments text-muted">
+                                View all 477 comments
+                            </div>
+                        </div>
+                        <!-- Third Feed -->
+                        <div class="feed">
+                            <div class="head">
+                                <div class="user">
+                                    <div class="profile-photo">
+                                        <img src="./image/profile-1.jpg" />
+                                    </div>
+                                    <div class="info">
+                                        <h3>Wana Maldita</h3>
+                                        <small class="text-muted"
+                                            >Cavite, 2 minutes ago
+                                        </small>
+                                    </div>
+                                </div>
+                                <span class="edit">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                            <div class="photo">
+                                <img src="./image/feed-3.jpg" alt="" />
+                            </div>
+                            <div class="action-button">
+                                <div class="interaction-button">
+                                    <span
+                                        ><i class="fa-regular fa-heart"></i
+                                    ></span>
+                                    <span
+                                        ><i class="fa-regular fa-comment"></i
+                                    ></span>
+                                    <span
+                                        ><i class="fa-solid fa-share-nodes"></i
+                                    ></span>
+                                </div>
+                                <div class="bookmark">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </div>
+                            </div>
+                            <div class="liked-by">
+                                <span
+                                    ><img src="./image/profile-18.jpg"
+                                /></span>
+                                <span><img src="./image/profile-3.jpg" /></span>
+                                <span><img src="./image/profile-7.jpg" /></span>
+                                <p>
+                                    Like by <b>Jose Rizal</b> and
+                                    <b>700 others</b>
+                                </p>
+                            </div>
+                            <div class="caption">
+                                <p>
+                                    <b>Wana Maldita</b> don’t say i can’t follow
+                                    instructions. 🤣😅❤️🧡💛💚💙 this one was a
+                                    lot of fun, despite the heat making every
+                                    single process a complete nightmare. split
+                                    buttercream, anyone?
+                                    <span class="hash-tag"> #rubiks</span>
+                                </p>
+                            </div>
+                            <div class="comments text-muted">
+                                View all 135 comments
+                            </div>
+                        </div>
+                        <!-- Fourth Feed -->
+                        <div class="feed">
+                            <div class="head">
+                                <div class="user">
+                                    <div class="profile-photo">
+                                        <img src="./image/profile-6.jpg" />
+                                    </div>
+                                    <div class="info">
+                                        <h3>Em Em</h3>
+                                        <small class="text-muted">
+                                            Monumento, 12 minutes ago
+                                        </small>
+                                    </div>
+                                </div>
+                                <span class="edit">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                            <div class="photo">
+                                <img src="./image/feed-4.jpg" />
+                            </div>
+                            <div class="action-button">
+                                <div class="interaction-button">
+                                    <span
+                                        ><i class="fa-regular fa-heart"></i
+                                    ></span>
+                                    <span
+                                        ><i class="fa-regular fa-comment"></i
+                                    ></span>
+                                    <span
+                                        ><i class="fa-solid fa-share-nodes"></i
+                                    ></span>
+                                </div>
+                                <div class="bookmark">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </div>
+                            </div>
+                            <div class="liked-by">
+                                <span
+                                    ><img src="./image/profile-19.jpg"
+                                /></span>
+                                <span><img src="./image/profile-1.jpg" /></span>
+                                <span><img src="./image/profile-2.jpg" /></span>
+                                <p>
+                                    Like by <b>Jess Sampo</b> and
+                                    <b>2,396 others</b>
+                                </p>
+                            </div>
+                            <div class="caption">
+                                <p>
+                                    <b>Em Em</b> Build a rubiks art
+                                    <span class="hash-tag"> #rubiks</span>
+                                </p>
+                            </div>
+                            <div class="comments text-muted">
+                                View all 277 comments
+                            </div>
+                        </div>
+                        <!-- Fifth Feed -->
+                        <div class="feed">
+                            <div class="head">
+                                <div class="user">
+                                    <div class="profile-photo">
+                                        <img src="./image/profile-7.jpg" />
+                                    </div>
+                                    <div class="info">
+                                        <h3>Lama Guererro</h3>
+                                        <small class="text-muted"
+                                            >Caloocan , 7 minutes ago
+                                        </small>
+                                    </div>
+                                </div>
+                                <span class="edit">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                            <div class="photo">
+                                <img src="./image/feed-5.jpg" />
+                            </div>
+                            <div class="action-button">
+                                <div class="interaction-button">
+                                    <span
+                                        ><i class="fa-regular fa-heart"></i
+                                    ></span>
+                                    <span
+                                        ><i class="fa-regular fa-comment"></i
+                                    ></span>
+                                    <span
+                                        ><i class="fa-solid fa-share-nodes"></i
+                                    ></span>
+                                </div>
+                                <div class="bookmark">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </div>
+                            </div>
+                            <div class="liked-by">
+                                <span><img src="./image/profile-6.jpg" /></span>
+                                <span><img src="./image/profile-9.jpg" /></span>
+                                <span
+                                    ><img src="./image/profile-10.jpg"
+                                /></span>
+                                <p>
+                                    Like by <b>Jhong Navarro</b> and
+                                    <b>323 others</b>
+                                </p>
+                            </div>
+                            <div class="caption">
+                                <p>
+                                    <b>Lama Guererro</b> Art 😍
+                                    <span class="hash-tag"> #rubiks #art</span>
+                                </p>
+                            </div>
+                            <div class="comments text-muted">
+                                View all 57 comments
+                            </div>
+                        </div>
+                        <!-- Sixth Feed -->
+                        <div class="feed">
+                            <div class="head">
+                                <div class="user">
+                                    <div class="profile-photo">
+                                        <img src="./image/profile-16.jpg" />
+                                    </div>
+                                    <div class="info">
+                                        <h3>Lara Croft</h3>
+                                        <small>BGC Makati , 7 minutes </small>
+                                    </div>
+                                </div>
+                                <span class="edit">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                            <div class="photo">
+                                <img src="./image/feed-6.jpg" />
+                            </div>
+                            <div class="action-button">
+                                <div class="interaction-button">
+                                    <span
+                                        ><i class="fa-regular fa-heart"></i
+                                    ></span>
+                                    <span
+                                        ><i class="fa-regular fa-comment"></i
+                                    ></span>
+                                    <span
+                                        ><i class="fa-solid fa-share-nodes"></i
+                                    ></span>
+                                </div>
+                                <div class="bookmark">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </div>
+                            </div>
+                            <div class="liked-by">
+                                <span><img src="./image/profile-8.jpg" /></span>
+                                <span
+                                    ><img src="./image/profile-15.jpg"
+                                /></span>
+                                <span
+                                    ><img src="./image/profile-18.jpg"
+                                /></span>
+                                <p>
+                                    Like by <b>Dante Ceaser</b> and
+                                    <b>1,620 others</b>
+                                </p>
+                            </div>
+                            <div class="caption">
+                                <p>
+                                    <b>Lara Croft</b> Kapows! 🎉 Bang⚡
+                                    <span class="hash-tag"> #RubiksArt</span>
+                                </p>
+                            </div>
+                            <div class="comments text-muted">
+                                View all 637 comments
+                            </div>
+                        </div>
+                        <!-- Seventh Feed -->
+                        <div class="feed">
+                            <div class="head">
+                                <div class="user">
+                                    <div class="profile-photo">
+                                        <img src="./image/profile-8.jpg" />
+                                    </div>
+                                    <div class="info">
+                                        <h3>Iggy boy</h3>
+                                        <small class="text-muted"
+                                            >Manila, 1 minute ago
+                                        </small>
+                                    </div>
+                                </div>
+                                <span class="edit">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                            <div class="photo">
+                                <img src="./image/feed-7.jpg" />
+                            </div>
+                            <div class="action-button">
+                                <div class="interaction-button">
+                                    <span
+                                        ><i class="fa-regular fa-heart"></i
+                                    ></span>
+                                    <span
+                                        ><i class="fa-regular fa-comment"></i
+                                    ></span>
+                                    <span
+                                        ><i class="fa-solid fa-share-nodes"></i
+                                    ></span>
+                                </div>
+                                <div class="bookmark">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </div>
+                            </div>
+                            <div class="liked-by">
+                                <span><img src="./image/profile-7.jpg" /></span>
+                                <span><img src="./image/profile-3.jpg" /></span>
+                                <span
+                                    ><img src="./image/profile-11.jpg"
+                                /></span>
+                                <p>
+                                    Like by <b>Jayjay Bigboy</b> and
+                                    <b>100 others</b>
+                                </p>
+                            </div>
+                            <div class="caption">
+                                <p>
+                                    <b>Iggy Boy</b> Be humble ! Sitdown
+                                    <span class="hash-tag"> #BriksBriks</span>
+                                </p>
+                            </div>
+                            <div class="comments text-muted">
+                                View all 27 comments
+                            </div>
+                        </div>
+                        <!-- Eight Feed -->
+                        <div class="feed">
+                            <div class="head">
+                                <div class="user">
+                                    <div class="profile-photo">
+                                        <img src="./image/profile-11.jpg" />
+                                    </div>
+                                    <div class="info">
+                                        <h3>Blengblong Ramos</h3>
+                                        <small class="text-muted"
+                                            >Valenzuela, 18 minutes ago
+                                        </small>
+                                    </div>
+                                </div>
+                                <span class="edit">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
+                            <div class="photo">
+                                <img src="./image/feed-8.jpg" />
+                            </div>
+                            <div class="action-button">
+                                <div class="interaction-button">
+                                    <span
+                                        ><i class="fa-regular fa-heart"></i
+                                    ></span>
+                                    <span
+                                        ><i class="fa-regular fa-comment"></i
+                                    ></span>
+                                    <span
+                                        ><i class="fa-solid fa-share-nodes"></i
+                                    ></span>
+                                </div>
+                                <div class="bookmark">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </div>
+                            </div>
+                            <div class="liked-by">
+                                <span><img src="./image/profile-7.jpg" /></span>
+                                <span
+                                    ><img src="./image/profile-15.jpg"
+                                /></span>
+                                <span><img src="./image/profile-3.jpg" /></span>
+                                <p>
+                                    Like by <b>Dr. Strange</b> and
+                                    <b>523 others</b>
+                                </p>
+                            </div>
+                            <div class="caption">
+                                <p>
+                                    <b>Blengblong Ramos</b> Focus! 👊
+                                    <span class="hash-tag"> #rubiks</span>
+                                </p>
+                            </div>
+                            <div class="comments text-muted">
+                                View all 85 comments
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Profile -->
+            <div class="right">
+                <div class="top">
+                    <div id="menu-btn">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <div class="profile">
+                        <div class="theme">
+                            <a class="menu-item">
+                                <i class="fa-solid fa-palette"></i>
+                            </a>
+                        </div>
+                        <div class="create">
+                            <label class="btn btn-primary" for="create-post"
+                                >Create</label
+                            >
+                        </div>
+                        <div class="info">
+                            <p>Hey, <b>User</b></p>
+                            <small class="text-muted">Web Developer</small>
+                        </div>
+                        <div class="profile-photo">
+                            <img src="./image/profile.png" alt="profile" />
+                        </div>
+                    </div>
+                </div>
+                <div class="below">
+                    <div class="messages">
+                        <div class="headings">
+                            <h4>Messages</h4>
+                            <i class="fa-regular fa-pen-to-square"></i>
+                        </div>
+                        <!-- Search Bar -->
+                        <div class="search-bar">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input
+                                type="search"
+                                placeholder="Search messages"
+                                id="message-search"
+                            />
+                        </div>
+                        <!-- Messages Category -->
+                        <div class="category">
+                            <h6 class="active">Primary</h6>
+                            <h6>General</h6>
+                            <h6 class="message-request">Request(7)</h6>
+                        </div>
+                        <!-- Messages -->
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="./image/profile-18.jpg" />
+                            </div>
+                            <div class="message-body">
+                                <h5>Boknoy Quist</h5>
+                                <p class="text-muted">Just woke up bruh</p>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="./image/profile-3.jpg" />
+                            </div>
+                            <div class="message-body">
+                                <h5>Rafaela Torres</h5>
+                                <p class="text-muted">ok</p>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="./image/profile-11.jpg" />
+                            </div>
+                            <div class="message-body">
+                                <h5>Beans Ilagan</h5>
+                                <p class="text-muted">Maya nalang ulit</p>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="./image/profile-10.jpg" />
+                            </div>
+                            <div class="message-body">
+                                <h5>Katy Swift</h5>
+                                <p class="text-muted">
+                                    Pasend naman ng data for 2x2 rubiks
+                                </p>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="./image/profile-14.jpg" />
+                                <div class="active"></div>
+                            </div>
+                            <div class="message-body">
+                                <h5>Shanie Garcia</h5>
+                                <p class="text-bold">2 new messages</p>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="./image/profile-6.jpg" />
+                            </div>
+                            <div class="message-body">
+                                <h5>Juliet Makarey</h5>
+                                <p class="text-muted">lol u right</p>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="./image/profile-9.jpg" />
+                                <div class="active"></div>
+                            </div>
+                            <div class="message-body">
+                                <h5>Emmanuel Tan</h5>
+                                <p class="text-bold">Goodluck bro!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Messages -->
+
+                    <!-- Friend Request -->
+
+                    <div class="friend-request">
+                        <h4>Requests</h4>
+                        <div class="request">
+                            <div class="info">
+                                <div class="profile-photo">
+                                    <img src="./image/profile-19.jpg" alt="" />
+                                </div>
+                                <div>
+                                    <h5>Jairaya Sensei</h5>
+                                    <p class="text-muted">8 mutual friends</p>
+                                </div>
+                            </div>
+                            <div class="action">
+                                <button class="btn btn-primary">Accept</button>
+                                <button class="btn">Decline</button>
+                            </div>
+                        </div>
+                        <div class="request">
+                            <div class="info">
+                                <div class="profile-photo">
+                                    <img src="./image/profile-20.jpg" alt="" />
+                                </div>
+                                <div>
+                                    <h5>Glenda Batungbakal</h5>
+                                    <p class="text-muted">5 mutual friends</p>
+                                </div>
+                            </div>
+                            <div class="action">
+                                <button class="btn btn-primary">Accept</button>
+                                <button class="btn">Decline</button>
+                            </div>
+                        </div>
+                        <div class="request">
+                            <div class="info">
+                                <div class="profile-photo">
+                                    <img src="./image/profile-10.jpg" alt="" />
+                                </div>
+                                <div>
+                                    <h5>Jeniffer Watson</h5>
+                                    <p class="text-muted">19 mutual friends</p>
+                                </div>
+                            </div>
+                            <div class="action">
+                                <button class="btn btn-primary">Accept</button>
+                                <button class="btn">Decline</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- End of top right -->
+            <div class="customize-theme">
+                <div class="card">
+                    <h2>Customize your view</h2>
+                    <p class="text-muted">Manage your color and background</p>
+
+                    <!-- Primary Colors -->
+                    <div class="color">
+                        <h4>Color</h4>
+                        <div class="choose-color">
+                            <span class="color-1 active"></span>
+                            <span class="color-2"></span>
+                            <span class="color-3"></span>
+                            <span class="color-4"></span>
+                            <span class="color-5"></span>
+                        </div>
+                    </div>
+                    <!-- Background Colors -->
+                    <div class="background">
+                        <h4>Background</h4>
+                        <div class="choose-bg">
+                            <div class="bg-1 active">
+                                <span></span>
+                                <h5 for="bg-1">Light</h5>
+                            </div>
+                            <div class="bg-2">
+                                <span></span>
+                                <h5>Dim</h5>
+                            </div>
+                            <div class="bg-3">
+                                <span></span>
+                                <h5 for="bg-3">Lights Out</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container-footer">
+                <div class="row">
+                    <div class="footer-col">
+                        <div class="title">
+                            <img
+                                src="./image/giphy.gif"
+                                alt="Logo"
+                                style="width: 50px"
+                            />
+                            <h2 class="white">
+                                NO <span class="primary">EROR</span>
+                            </h2>
+                        </div>
+                        <ul>
+                            <li><a href="#">about us</a></li>
+                            <li><a href="#">our services</a></li>
+                            <li><a href="#">privacy policy</a></li>
+                            <li><a href="#">Developers Team</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Get help</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">shipping</a></li>
+                            <li><a href="#">returns</a></li>
+                            <li><a href="#">order status</a></li>
+                            <li><a href="#">payment options</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="#">Rubiks 2x2</a></li>
+                            <li><a href="#">Rubiks 3x3</a></li>
+                            <li><a href="#">Rubiks 4x4</a></li>
+                            <li><a href="#">Rubiks 5x5</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Follow us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="./js/newsfeed.js"></script>
+    </body>
+</html>

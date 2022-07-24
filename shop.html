@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <link rel="shortcut icon" type="image/png" href="img/icon.png">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./css/shop.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://kit.fontawesome.com/651214d8bf.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/shop.js"></script>
+</head>
+
+<body onload="pageInit();">
+    <div class="container">
+        <button class="w3-circle" id="cart-fab"><i class="fa-solid fa-cart-shopping"></i></button>
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="./img/giphy.gif" alt="Logo" />
+                    <h2><strong>NO <span class="primary">EROR</span></strong></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <i onclick='$("aside").hide()' class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="#">
+                    <i class="fa-solid fa-house"></i>
+                    <h3>Home</h3>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-border-all"></i>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <h3>Tutorials</h3>
+                </a>
+                <a href="#" class="active">
+                    <i class="fa-solid fa-store"></i>
+                    <h3>Products</h3>
+                    <span class="product-count">3</span>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-newspaper"></i>
+                    <h3>Newsfeeds</h3>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-users"></i>
+                    <h3>Developers</h3>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-address-book"></i>
+                    <h3>Contacts</h3>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <div class="right">
+            <div class="top">
+                <div id="menu-btn">
+                    <i onclick='$("aside").show()' class="fa-solid fa-bars"></i>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>User</b></p>
+                        <small class="text-muted">Web Developer</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="./img/profile.png" alt="profile" />
+                    </div>
+                </div>
+            </div>
+            <h1>Products</h1>
+            <main class=w3-row>
+                <div id="cart-modal" class="w3-modal w3-animate-opacity w3-display-container">
+                    <div class="w3-display-right w3-modal-content" id="cartdiv">
+                        <i id="cart-close" class="fa-solid fa-xmark"></i>
+                        <h2 id="carttitle">Shopping Cart</h2>
+                        <div id="cartlist">
+                            <table id="checkoutTable">
+                            </table>
+                        </div>
+                        <div class="w3-display-container" id="checkoutfoot">
+                            <p class="w3-display-left" id="checkouttotal"><strong>TOTAL: ₱<span
+                                        id="total">0</span></strong>
+                            </p>
+                            <button class="w3-display-right w3-cell checkout" onclick="fmodal()" href="Checkout.html">Checkout</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="shopDiv" class="w3-rest w3-mobile">
+                    <div class="w3-row-padding">
+                        <div class="w3-col s6 m4 l2">
+                            <div class="main-card">
+
+                                <div class="w3-container square">
+                                    <div class="square-contents w3-display-container">
+                                        
+                                        <img class="shop-img w3-display-middle" src="./img/1.jpg">
+                                        <span
+                                            class="item-price w3-display-bottomright w3-tag w3-padding w3-round">₱100</span>
+                                            <div class="add-cart-confirmation w3-display-container w3-animate-opacity w3-hide w3-display-middle">
+                                                <div class="w3-display-middle">
+                                                    <i class="fa-solid fa-circle-check add-cart-check"></i>
+                                                    <p class="add-cart-text">Added Successfully</p>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="item-name w3-display-container">
+                                    <h1 class="w3-display-middle">3x3 </h1>
+                                </div>
+                                <div class="w3-row button-row">
+                                    <button class="add-cart w3-col s6 m6 l6 shop-item-button"><i
+                                            class="fa-solid fa-cart-shopping w3-hide-large"></i><span
+                                            class="w3-hide-small w3-hide-medium">Add to Cart</span></button>
+                                    <button class="buy-now w3-col s6 m6 l6 shop-item-button"><i
+                                            class="fa-solid fa-money-bill-wave w3-hide-large"></i><span
+                                            class="w3-hide-small w3-hide-medium">Buy Now</span></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w3-col s6 m4 l2">
+                            <div class="main-card">
+                                <div class="w3-container square">
+                                    <div class="square-contents w3-display-container">
+                                        
+                                        <img class="shop-img w3-display-middle" src="./img/2.jpg">
+                                        <span
+                                            class="item-price w3-display-bottomright w3-tag w3-padding w3-round">₱750</span>
+                                            <div class="add-cart-confirmation w3-display-container w3-animate-opacity w3-hide w3-display-middle">
+                                                <div class="w3-display-middle">
+                                                    <i class="fa-solid fa-circle-check add-cart-check"></i>
+                                                    <p class="add-cart-text">Added Successfully</p>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="item-name w3-display-container">
+                                    <h1 class="w3-display-middle">Pentaminx </h1>
+                                </div>
+                                <div class="w3-row button-row">
+                                    <button class="add-cart w3-col s6 m6 l6 shop-item-button"><i
+                                            class="fa-solid fa-cart-shopping w3-hide-large"></i><span
+                                            class="w3-hide-small w3-hide-medium">Add to Cart</span></button>
+                                    <button class="buy-now w3-col s6 m6 l6 shop-item-button"><i
+                                            class="fa-solid fa-money-bill-wave w3-hide-large"></i><span
+                                            class="w3-hide-small w3-hide-medium">Buy Now</span></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w3-col s6 m4 l2">
+                            <div class="main-card">
+                                <div class="w3-container square">
+                                    <div class="square-contents w3-display-container">
+                                        
+                                        <img class="shop-img w3-display-middle" src="./img/3.webp">
+                                        <span
+                                            class="item-price w3-display-bottomright w3-tag w3-padding w3-round">₱100</span>
+                                            <div class="add-cart-confirmation w3-display-container w3-animate-opacity w3-hide w3-display-middle">
+                                                <div class="w3-display-middle">
+                                                    <i class="fa-solid fa-circle-check add-cart-check"></i>
+                                                    <p class="add-cart-text">Added Successfully</p>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="item-name w3-display-container">
+                                    <h1 class="w3-display-middle">2x2 </h1>
+                                </div>
+                                <div class="w3-row button-row">
+                                    <button class="add-cart w3-col s6 m6 l6 shop-item-button"><i
+                                            class="fa-solid fa-cart-shopping w3-hide-large"></i><span
+                                            class="w3-hide-small w3-hide-medium">Add to Cart</span></button>
+                                    <button class="buy-now w3-col s6 m6 l6 shop-item-button"><i
+                                            class="fa-solid fa-money-bill-wave w3-hide-large"></i><span
+                                            class="w3-hide-small w3-hide-medium">Buy Now</span></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w3-col s6 m4 l2">
+                            <div class="main-card">
+                                <div class="w3-container square">
+                                    <div class="square-contents w3-display-container">
+                                        
+                                        <img class="shop-img w3-display-middle" src="./img/4.jpeg">
+                                        <span
+                                            class="item-price w3-display-bottomright w3-tag w3-padding w3-round">₱350</span>
+                                            <div class="add-cart-confirmation w3-display-container w3-animate-opacity w3-hide w3-display-middle">
+                                                <div class="w3-display-middle">
+                                                    <i class="fa-solid fa-circle-check add-cart-check"></i>
+                                                    <p class="add-cart-text">Added Successfully</p>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="item-name w3-display-container">
+                                    <h1 class="w3-display-middle">Shape Shifter</h1>
+                                </div>
+                                <div class="w3-row button-row">
+                                    <button class="add-cart w3-col s6 m6 l6 shop-item-button"><i
+                                            class="fa-solid fa-cart-shopping w3-hide-large"></i><span
+                                            class="w3-hide-small w3-hide-medium">Add to Cart</span></button>
+                                    <button class="buy-now w3-col s6 m6 l6 shop-item-button"><i
+                                            class="fa-solid fa-money-bill-wave w3-hide-large"></i><span
+                                            class="w3-hide-small w3-hide-medium">Buy Now</span></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w3-col s6 m4 l2">
+                            <div class="main-card">
+                                <div class="w3-container square">
+                                    <div class="square-contents w3-display-container">
+                                        
+                                        <img class="shop-img w3-display-middle" src="./img/5.jpg">
+                                        <span
+                                            class="item-price w3-display-bottomright w3-tag w3-padding w3-round">₱150</span>
+                                            <div class="add-cart-confirmation w3-display-container w3-animate-opacity w3-hide w3-display-middle">
+                                                <div class="w3-display-middle">
+                                                    <i class="fa-solid fa-circle-check add-cart-check"></i>
+                                                    <p class="add-cart-text">Added Successfully</p>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="item-name w3-display-container">
+                                    <h1 class="w3-display-middle">Diamond</h1>
+                                </div>
+                                <div class="w3-row button-row">
+                                    <button class="add-cart w3-col s6 m6 l6 shop-item-button"><i
+                                            class="fa-solid fa-cart-shopping w3-hide-large"></i><span
+                                            class="w3-hide-small w3-hide-medium">Add to Cart</span></button>
+                                    <button class="buy-now w3-col s6 m6 l6 shop-item-button"><i
+                                            class="fa-solid fa-money-bill-wave w3-hide-large"></i><span
+                                            class="w3-hide-small w3-hide-medium">Buy Now</span></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w3-col s6 m4 l2">
+                            <div class="main-card">
+                                <div class="w3-container square">
+                                    <div class="square-contents w3-display-container">
+                                        
+                                        <img class="shop-img w3-display-middle" src="./img/6.jpg">
+                                        <span
+                                            class="item-price w3-display-bottomright w3-tag w3-padding w3-round">₱300</span>
+                                            <div class="add-cart-confirmation w3-display-container w3-animate-opacity w3-hide w3-display-middle">
+                                                <div class="w3-display-middle">
+                                                    <i class="fa-solid fa-circle-check add-cart-check"></i>
+                                                    <p class="add-cart-text">Added Successfully</p>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="item-name w3-display-container">
+                                    <h1 class="w3-display-middle">Mirror</h1>
+                                </div>
+                                <div class="w3-row button-row">
+                                    <button class="add-cart w3-col s6 m6 l6 shop-item-button"><i
+                                            class="fa-solid fa-cart-shopping w3-hide-large"></i><span
+                                            class="w3-hide-small w3-hide-medium">Add to Cart</span></button>
+                                    <button class="buy-now w3-col s6 m6 l6 shop-item-button"><i
+                                            class="fa-solid fa-money-bill-wave w3-hide-large"></i><span
+                                            class="w3-hide-small w3-hide-medium">Buy Now</span></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w3-col s6 m4 l2">
+                            <div class="main-card">
+                                <div class="w3-container square">
+                                    <div class="square-contents w3-display-container">
+                                        
+                                        <img class="shop-img w3-display-middle" src="./img/7.jpg">
+                                        <span
+                                            class="item-price w3-display-bottomright w3-tag w3-padding w3-round">₱500</span>
+                                            <div class="add-cart-confirmation w3-display-container w3-animate-opacity w3-hide w3-display-middle">
+                                                <div class="w3-display-middle">
+                                                    <i class="fa-solid fa-circle-check add-cart-check"></i>
+                                                    <p class="add-cart-text">Added Successfully</p>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="item-name w3-display-container">
+                                    <h1 class="w3-display-middle">4x5 Windmill</h1>
+                                </div>
+                                <div class="w3-row button-row">
+                                    <button class="add-cart w3-col s6 m6 l6 shop-item-button"><i
+                                            class="fa-solid fa-cart-shopping w3-hide-large"></i><span
+                                            class="w3-hide-small w3-hide-medium">Add to Cart</span></button>
+                                    <button class="buy-now w3-col s6 m6 l6 shop-item-button"><i
+                                            class="fa-solid fa-money-bill-wave w3-hide-large"></i><span
+                                            class="w3-hide-small w3-hide-medium">Buy Now</span></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w3-col s6 m4 l2">
+                            <div class="main-card">
+                                <div class="w3-container square">
+                                    <div class="square-contents w3-display-container">
+                                        
+                                        <img class="shop-img w3-display-middle" src="./img/8.jpg">
+                                        <span
+                                            class="item-price w3-display-bottomright w3-tag w3-padding w3-round">₱950</span>
+                                            <div class="add-cart-confirmation w3-display-container w3-animate-opacity w3-hide w3-display-middle">
+                                                <div class="w3-display-middle">
+                                                    <i class="fa-solid fa-circle-check add-cart-check"></i>
+                                                    <p class="add-cart-text">Added Successfully</p>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="item-name w3-display-container">
+                                    <h1 class="w3-display-middle">3x5</h1>
+                                </div>
+                                <div class="w3-row button-row">
+                                    <button class="add-cart w3-col s6 m6 l6 shop-item-button"><i
+                                            class="fa-solid fa-cart-shopping w3-hide-large"></i><span
+                                            class="w3-hide-small w3-hide-medium">Add to Cart</span></button>
+                                    <button class="buy-now w3-col s6 m6 l6 shop-item-button"><i
+                                            class="fa-solid fa-money-bill-wave w3-hide-large"></i><span
+                                            class="w3-hide-small w3-hide-medium">Buy Now</span></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w3-col s6 m4 l2">
+                            <div class="main-card">
+                                <div class="w3-container square">
+                                    <div class="square-contents w3-display-container">
+                                        
+                                        <img class="shop-img w3-display-middle" src="./img/9.jpg">
+                                        <span
+                                            class="item-price w3-display-bottomright w3-tag w3-padding w3-round">₱200</span>
+                                            <div class="add-cart-confirmation w3-display-container w3-animate-opacity w3-hide w3-display-middle">
+                                                <div class="w3-display-middle">
+                                                    <i class="fa-solid fa-circle-check add-cart-check"></i>
+                                                    <p class="add-cart-text">Added Successfully</p>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="item-name w3-display-container">
+                                    <h1 class="w3-display-middle"> Pyraminx</h1>
+                                </div>
+                                <div class="w3-row button-row">
+                                    <button class="add-cart w3-col s6 m6 l6 shop-item-button"><i
+                                            class="fa-solid fa-cart-shopping w3-hide-large"></i><span
+                                            class="w3-hide-small w3-hide-medium">Add to Cart</span></button>
+                                    <button class="buy-now w3-col s6 m6 l6 shop-item-button"><i
+                                            class="fa-solid fa-money-bill-wave w3-hide-large"></i><span
+                                            class="w3-hide-small w3-hide-medium">Buy Now</span></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w3-col s6 m4 l2">
+                            <div class="main-card">
+                                <div class="w3-container square">
+                                    <div class="square-contents w3-display-container">
+                                        
+                                        <img class="shop-img w3-display-middle" src="./img/10.jpg">
+                                        <span
+                                            class="item-price w3-display-bottomright w3-tag w3-padding w3-round">₱200</span>
+                                            <div class="add-cart-confirmation w3-display-container w3-animate-opacity w3-hide w3-display-middle">
+                                                <div class="w3-display-middle">
+                                                    <i class="fa-solid fa-circle-check add-cart-check"></i>
+                                                    <p class="add-cart-text">Added Successfully</p>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="item-name w3-display-container">
+                                    <h1 class="w3-display-middle">Round 2x3</h1>
+                                </div>
+                                <div class="w3-row button-row">
+                                    <button class="add-cart w3-col s6 m6 l6 shop-item-button"><i
+                                            class="fa-solid fa-cart-shopping w3-hide-large"></i><span
+                                            class="w3-hide-small w3-hide-medium">Add to Cart</span></button>
+                                    <button class="buy-now w3-col s6 m6 l6 shop-item-button"><i
+                                            class="fa-solid fa-money-bill-wave w3-hide-large"></i><span
+                                            class="w3-hide-small w3-hide-medium">Buy Now</span></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w3-col s6 m4 l2">
+                            <div class="main-card">
+                                <div class="w3-container square">
+                                    <div class="square-contents w3-display-container">
+                                        
+                                        <img class="shop-img w3-display-middle" src="./img/11.jpg">
+                                        <span
+                                            class="item-price w3-display-bottomright w3-tag w3-padding w3-round">₱300</span>
+                                            <div class="add-cart-confirmation w3-display-container w3-animate-opacity w3-hide w3-display-middle">
+                                                <div class="w3-display-middle">
+                                                    <i class="fa-solid fa-circle-check add-cart-check"></i>
+                                                    <p class="add-cart-text">Added Successfully</p>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+
+                                <div class="item-name w3-display-container">
+                                    <h1 class="w3-display-middle">4x4 </h1>
+                                </div>
+                                <div class="w3-row button-row">
+                                    <button class="add-cart w3-col s6 m6 l6 shop-item-button"><i
+                                            class="fa-solid fa-cart-shopping w3-hide-large"></i><span
+                                            class="w3-hide-small w3-hide-medium">Add to Cart</span></button>
+                                    <button class="buy-now w3-col s6 m6 l6 shop-item-button"><i
+                                            class="fa-solid fa-money-bill-wave w3-hide-large"></i><span
+                                            class="w3-hide-small w3-hide-medium">Buy Now</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w3-col s6 m4 l2">
+                            <div class="main-card">
+                                <div class="w3-container square">
+                                    <div class="square-contents w3-display-container">
+                                        
+                                        <img class="shop-img w3-display-middle" src="./img/12.jpeg">
+                                        <span
+                                            class="item-price w3-display-bottomright w3-tag w3-padding w3-round">₱450</span>
+                                            <div class="add-cart-confirmation w3-display-container w3-animate-opacity w3-hide w3-display-middle">
+                                                <div class="w3-display-middle">
+                                                    <i class="fa-solid fa-circle-check add-cart-check"></i>
+                                                    <p class="add-cart-text">Added Successfully</p>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="item-name w3-display-container">
+                                    <h1 class="w3-display-middle">5x5 </h1>
+                                </div>
+                                <div class="w3-row button-row">
+                                    <button class="add-cart w3-col s6 m6 l6 shop-item-button"><i
+                                            class="fa-solid fa-cart-shopping w3-hide-large"></i><span
+                                            class="w3-hide-small w3-hide-medium">Add to Cart</span></button>
+                                    <button class="buy-now w3-col s6 m6 l6 shop-item-button"><i
+                                            class="fa-solid fa-money-bill-wave w3-hide-large"></i><span
+                                            class="w3-hide-small w3-hide-medium">Buy Now</span></button>
+                                </div>
+                            </div>
+                        </div>
+            </main>
+        </div>
+        <audio id="myAudio">
+            <source src="http://soundbible.com/grab.php?id=1424&type=mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+        </audio>
+</body>
+
+</html>
