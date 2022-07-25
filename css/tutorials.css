@@ -1025,6 +1025,7 @@ ul {
     }
 
     .dropdown {
+display : block;
         position: relative;
         align-items: center;
         right: 15px;
@@ -1032,6 +1033,7 @@ ul {
     }
 
     .dropdown1 {
+display:block;
         position: relative;
         right: 25px;
         top: 20%;
