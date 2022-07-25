@@ -882,7 +882,7 @@ p {
 
 @media screen and (max-width: 600px) {
     .wrapper {
-        left: 20%;
+        left: 5%;
     }
     .contact-form {
         flex-direction: column;
@@ -896,7 +896,7 @@ p {
     }
 
     .container-banner {
-        width: 1200px;
+        width: 110%;
         margin-left: 0;
         margin-right: 0;
     }
@@ -904,9 +904,11 @@ p {
         margin-left: 5px;
     }
 
-    .container-dev {
+    .container-dev 
+display : flex;
+flex-wrap: wrap;
         margin-left: 20px;
-        width: 100%;
+        width: 300px
     }
 
     .right .top {
