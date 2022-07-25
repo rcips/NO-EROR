@@ -907,22 +907,22 @@ main {
 
 @media screen and (max-width: 780px) {
     main {
-        width: 600px;
+        width:800px;
         margin-left: 5%;
     }
 
     form {
-        width: 600px;
+        width:800px;
         margin-left: 5%;
     }
 
     .below {
-        width: 600px;
+        width:800px;
         margin-left: 5%;
     }
 
     .customize-theme {
-        width: 600px;
+        width:800px;
         margin-left: 5%;
     }
 
