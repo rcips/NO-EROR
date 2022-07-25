@@ -523,6 +523,7 @@ main {
 
 /* Create Post */
 .middle .create-post {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -536,6 +537,7 @@ main {
 
 .middle .create-post input[type="text"] {
     justify-self: start;
+    width: 100%;
     padding-left: 1rem;
     background: transparent;
     color: var(--color-dark);
@@ -547,6 +549,7 @@ main {
 .middle .feeds {
     padding: var(--card-padding-1);
     margin-left: 0.5rem;
+    width: 720px;
 }
 .middle .feeds .feed {
     background: var(--color-white);
@@ -883,72 +886,77 @@ main {
     margin-right: 1rem;
 }
 
-@media screen and (max-width: 990px) {
-    main {
+@media (max-width: 1200px) {
+    .container {
         width: 100%;
     }
 
-    form {
-        width: 100%;
-    }
-
-    .below {
-        width: 100%;
-    }
-
-    .customize-theme {
+    .menu-item {
         width: 100%;
     }
 
     .customize-theme .card {
-        width: 80vw;
+        width: 92vw;
+    }
+
+    main {
+        margin-left: 0;
     }
 }
 
-@media screen and (max-width: 780px) {
+@media (max-width: 990px) {
+    .container {
+        width: 600px;
+    }
     main {
-        width:800px;
-        margin-left: 5%;
+        margin-left: 0;
+    }
+    main .middle {
+        margin-left: 0;
+    }
+    main .middle .stories {
+        width: 100%;
     }
 
-    form {
-        width:800px;
-        margin-left: 5%;
+    main .middle .feeds {
+        width: 100%;
     }
 
-    .below {
-        width:800px;
-        margin-left: 5%;
+    .right .below {
+        margin-top: 2px;
     }
 
+    .right .below .messages {
+        width: 100%;
+    }
+
+    .right .below .friend-request {
+        width: 100%;
+    }
+    .right .top {
+        width: 100%;
+    }
+
+    .create-post {
+        width: 100%;
+    }
     .customize-theme {
-        width:800px;
-        margin-left: 5%;
+        width: 100%;
     }
-
     .customize-theme .card {
-        width: 80vw;
+        width: 105vw;
     }
 }
 
 @media (max-width: 393px) {
+    .container {
+        width: 600px;
+    }
     main {
-        width: 100%;
+        width: 600px;
     }
 
-    form {
-        width: 100%;
-    }
-
-    .below {
-        width: 100%;
-    }
-
-    .customize-theme {
-        width: 100%;
-    }
-
-    .customize-theme .card {
+    .right {
         width: 600px;
     }
 }
@@ -1061,22 +1069,6 @@ ul {
 @media (max-width: 768px) {
     footer {
         width: 600px;
-    }
-
-    .container-footer {
-        width: 100%;
-        grid-template-columns: 1fr;
-    }
-
-    .footer-col {
-        width: 50%;
-        margin-bottom: 30px;
-    }
-}
-
-@media (max-width: 420px) {
-    footer {
-        width: 660px;
     }
 
     .container-footer {
