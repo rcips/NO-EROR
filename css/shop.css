@@ -1046,7 +1046,7 @@ ul {
 
 @media (max-width: 990px) {
     footer {
-        width: 600px;
+      width: 100%;
     }
 
     .container-footer {
@@ -1062,7 +1062,7 @@ ul {
 
 @media (max-width: 768px) {
     footer {
-        width: 600px;
+        width: 100%;
     }
 
     .container-footer {
@@ -1078,7 +1078,7 @@ ul {
 
 @media (max-width: 420px) {
     footer {
-        width: 660px;
+       width: 100%;
     }
 
     .container-footer {
@@ -1094,7 +1094,7 @@ ul {
 
 @media (max-width: 393px) {
     footer {
-        width: 600px;
+        width: 100%;
     }
 
     .container-footer {
@@ -1110,7 +1110,7 @@ ul {
 
 @media (max-width: 375px) {
     footer {
-        width: 600px;
+       width: 100%;
     }
 
     .container-footer {
