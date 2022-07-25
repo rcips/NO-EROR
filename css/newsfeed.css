@@ -906,7 +906,7 @@ main {
 
 @media (max-width: 990px) {
     .container {
-        width: 600px;
+        width: 400px;
     }
     main {
         margin-left: 0;
@@ -915,11 +915,11 @@ main {
         margin-left: 0;
     }
     main .middle .stories {
-        width: 100%;
+        width: 80%;
     }
 
     main .middle .feeds {
-        width: 100%;
+        width: 80%;
     }
 
     .right .below {
@@ -927,21 +927,21 @@ main {
     }
 
     .right .below .messages {
-        width: 100%;
+        width: 80%;
     }
 
     .right .below .friend-request {
-        width: 100%;
+        width: 80%;
     }
     .right .top {
         width: 100%;
     }
 
     .create-post {
-        width: 100%;
+        width: 80%;
     }
     .customize-theme {
-        width: 100%;
+        width: 80%;
     }
     .customize-theme .card {
         width: 105vw;
@@ -950,14 +950,14 @@ main {
 
 @media (max-width: 393px) {
     .container {
-        width: 600px;
+        width: 400px;
     }
     main {
-        width: 600px;
+        width: 400px;
     }
 
     .right {
-        width: 600px;
+        width: 400px;
     }
 }
 
